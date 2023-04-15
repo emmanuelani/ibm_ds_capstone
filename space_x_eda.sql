@@ -1,0 +1,9 @@
+SELECT * FROM spacex;
+
+SELECT COLUMN_NAME
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'spacex'
+
+SELECT Launch_Site, SUM(PAYLOAD_MASS_KG) payload_mass FROM ..spacex
+GROUP by Launch_Site
+ORDER BY payload_mass DESC;
